@@ -19,4 +19,12 @@ public class NGram {
     public String getNgram() {
         return ngram;
     }
+
+    @Override
+    public String toString() {
+        return "NGram{" +
+                "ngram='" + ngram + '\'' +
+                ", ngramID=" + ngramID +
+                '}';
+    }
 }

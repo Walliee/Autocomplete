@@ -19,4 +19,12 @@ public class Word {
     public String getWord() {
         return word;
     }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "word='" + word + '\'' +
+                ", wordID=" + wordID +
+                '}';
+    }
 }

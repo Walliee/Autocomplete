@@ -20,7 +20,7 @@ public class NGramRegister {
         ngramMap = new HashMap<>(wordIdGeneratorBaseSize);
     }
 
-    public long register(String ngram) {
+    public Integer register(String ngram) {
         if(!ngramMap.containsKey(ngram)){
             ngramMap.put(ngram, nextID);
             return nextID++;

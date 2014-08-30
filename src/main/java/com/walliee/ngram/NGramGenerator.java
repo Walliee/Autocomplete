@@ -7,7 +7,7 @@ import java.util.List;
  * Created by Walliee on 8/29/14.
  */
 public class NGramGenerator {
-    public static List<String> generateNGrams(String word, int size) {
+    public List<String> generateNGrams(String word, int size) {
         if(null == word || word.isEmpty() || size <= 0) {
             throw new IllegalArgumentException();
         }

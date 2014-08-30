@@ -10,30 +10,30 @@ public class NGramGeneratorTest {
 
     @Test
     public void test3GramGenerator() {
-        List<String> actualNGrams = NGramGenerator.generateNGrams("awarding", 3);
+        List<String> actualNGrams = new NGramGenerator().generateNGrams("awarding", 3);
         List<String> expectedNGrams = Arrays.asList("awa", "war", "ard", "rdi", "din", "ing");
         Assert.assertEquals(expectedNGrams, actualNGrams);
     }
 
     @Test
     public void test4GramGenerator() {
-        List<String> actualNGrams = NGramGenerator.generateNGrams("awarding", 4);
+        List<String> actualNGrams = new NGramGenerator().generateNGrams("awarding", 4);
         List<String> expectedNGrams = Arrays.asList("awar", "ward", "ardi", "rdin", "ding");
         Assert.assertEquals(expectedNGrams, actualNGrams);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testFailureOnNull() {
-        NGramGenerator.generateNGrams(null, 4);
+        new NGramGenerator().generateNGrams(null, 4);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testFailureOnEmptyInput() {
-        NGramGenerator.generateNGrams("", 4);
+        new NGramGenerator().generateNGrams("", 4);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testFailureOnIllegalSize() {
-        NGramGenerator.generateNGrams("awarding", -1);
+        new NGramGenerator().generateNGrams("awarding", -1);
     }
 }
